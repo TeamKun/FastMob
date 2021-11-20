@@ -32,6 +32,7 @@ dependencies {
     //compileOnly "com.comphenix.protocol:ProtocolLib:4.7.0"
     //compileOnly fileTree(dir: "../libs/", include: "patched_1.16.5.jar")
     implementation "dev.kotx:flylib-reloaded:0.4.1"
+    compileOnly project(":bootstrap")
 
 }
 
@@ -74,6 +75,10 @@ processResources {
                 "MainClass": getMainClassFQDN(projectDir.toPath())
         ])
     }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
 }
 
 static String getMainClassFQDN(Path projectPath) {

@@ -26,6 +26,6 @@ public abstract class MixinEntityLiving extends Entity {
             return;
         }
 
-        super.move(type, vec.d(Config.others, 1.0, Config.others));
+        super.move(type, vec.d(Config.otherMobs, 1.0, Config.otherMobs));
     }
 }
