@@ -30,8 +30,8 @@ dependencies {
 jar {
     manifest {
         attributes(
-                "Main-Class": "${this.getGroup()}.papermixin.Main",
-                "MixinConfigs": "papermixin.mixins.json"
+                "Main-Class": "${this.getGroup()}.fastmob.Main",
+                "MixinConfigs": "fastmob.mixins.json"
         )
     }
 }

@@ -1,8 +1,8 @@
-package net.kunmc.lab.papermixin;
+package net.kunmc.lab.fastmob;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class PaperMixinExample extends JavaPlugin {
+public final class FastMob extends JavaPlugin {
     @Override
     public void onEnable() {
     }

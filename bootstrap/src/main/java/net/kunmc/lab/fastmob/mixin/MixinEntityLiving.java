@@ -1,4 +1,4 @@
-package net.kunmc.lab.papermixin.mixin;
+package net.kunmc.lab.fastmob.mixin;
 
 import net.minecraft.server.v1_16_R3.*;
 import org.bukkit.craftbukkit.v1_16_R3.entity.CraftEntity;

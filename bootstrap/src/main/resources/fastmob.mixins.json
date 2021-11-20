@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.kunmc.lab.papermixin.mixin",
+  "package": "net.kunmc.lab.fastmob.mixin",
   "target": "@env(DEFAULT)",
   "compatibilityLevel": "JAVA_8",
   "mixins": [

@@ -1,4 +1,4 @@
-package net.kunmc.lab.papermixin;
+package net.kunmc.lab.fastmob;
 
 import net.minecraft.launchwrapper.Launch;
 import org.apache.logging.log4j.Level;

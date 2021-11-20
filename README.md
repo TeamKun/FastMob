@@ -24,7 +24,7 @@ Intellij IDEAのRunConfigurationにある```RunServer```を実行すればMixin�
 ## FAQ
 
 * Mixinクラスを追加したい  
-  bootstrapプロジェクトの```net.kunmc.lab.papermixin.mixin```に新たなクラスを作成してください.  
+  bootstrapプロジェクトの```net.kunmc.lab.fastmob.mixin```に新たなクラスを作成してください.  
   また,resourcesの```papermixin.mixins.json```の```mixins```フィールドに作成したクラス名を追加してください.
 
 
