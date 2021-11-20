@@ -9,3 +9,4 @@ build/
 !/server/server.properties
 !/server/start.sh
 !/server/start.cmd
+!/server/spigot.yml
