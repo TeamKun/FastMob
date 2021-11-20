@@ -1,7 +1,9 @@
 package net.kunmc.lab.fastmob.mixin;
 
+import net.kunmc.lab.fastmob.Config;
 import net.minecraft.server.v1_16_R3.*;
 import org.bukkit.craftbukkit.v1_16_R3.entity.CraftEntity;
+import org.bukkit.entity.EnderDragon;
 import org.bukkit.entity.Player;
 import org.spongepowered.asm.mixin.Mixin;
 
@@ -16,8 +18,14 @@ public abstract class MixinEntityLiving extends Entity {
         CraftEntity e = getBukkitEntity();
         if (e instanceof Player) {
             super.move(type, vec);
-        } else {
-            super.move(type, vec.d(8.0, 1.0, 8.0));
+            return;
         }
+
+        if (e instanceof EnderDragon) {
+            super.move(type, vec.d(Config.enderdragon, 1.0, Config.enderdragon));
+            return;
+        }
+
+        super.move(type, vec.d(Config.others, 1.0, Config.others));
     }
 }
