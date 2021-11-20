@@ -15,7 +15,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
 public final class FastMob extends JavaPlugin {
-    public static double maxEnderDragonDistance = 256.0;
+    public static double maxEnderDragonDistance = 128.0;
 
     @Override
     public void onEnable() {
@@ -52,8 +52,10 @@ public final class FastMob extends JavaPlugin {
                             .filter(e -> e.getType().equals(EntityType.ENDER_DRAGON))
                             .forEach(e -> {
                                 Location loc = e.getLocation();
-                                if (loc.toVector().length() > maxEnderDragonDistance) {
-                                    e.teleportAsync(toUnit(loc.toVector()).multiply(maxEnderDragonDistance * 0.8).toLocation(loc.getWorld()));
+                                if (loc.distance(loc.clone().set(0, loc.getY(), 0)) > maxEnderDragonDistance) {
+                                    Location to = toUnit(loc.toVector()).multiply(maxEnderDragonDistance * 0.8).toLocation(loc.getWorld());
+                                    to.setY(80.0);
+                                    e.teleportAsync(to);
                                 }
                             });
                 }
