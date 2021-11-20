@@ -36,6 +36,19 @@ public class MainCommand extends Command {
             public void execute(CommandContext ctx) {
                 ctx.success("enderdragon: " + Config.enderdragon);
                 ctx.success("otherMobs: " + Config.otherMobs);
+                ctx.success("maxEnderDragonDistance: " + FastMob.maxEnderDragonDistance);
+            }
+        });
+
+        children(new Command("maxEnderDragonDistance") {
+            {
+                usage(builder -> {
+                    builder.doubleArgument("distance")
+                            .executes(ctx -> {
+                                FastMob.maxEnderDragonDistance = ((Double) ctx.getTypedArgs().get(0));
+                                ctx.success("maxEnderDragonDistanceの値を" + FastMob.maxEnderDragonDistance + "に変更しました.");
+                            });
+                });
             }
         });
     }
