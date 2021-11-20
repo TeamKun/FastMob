@@ -7,25 +7,25 @@ public class MainCommand extends Command {
     public MainCommand() {
         super("fastmob");
 
-        children(new Command("enderdragon") {
+        children(new Command("enderDragonSpeed") {
             {
                 usage(builder -> {
                     builder.doubleArgument("speed")
                             .executes(ctx -> {
-                                Config.enderdragon = ((Double) ctx.getTypedArgs().get(0));
-                                ctx.success("enderdragonのspeedを" + Config.enderdragon + "に変更しました.");
+                                Config.enderDragonSpeed = ((Double) ctx.getTypedArgs().get(0));
+                                ctx.success("enderDragonSpeedを" + Config.enderDragonSpeed + "に変更しました.");
                             });
                 });
             }
         });
 
-        children(new Command("otherMobs") {
+        children(new Command("otherMobsSpeed") {
             {
                 usage(builder -> {
                     builder.doubleArgument("speed")
                             .executes(ctx -> {
-                                Config.otherMobs = ((Double) ctx.getTypedArgs().get(0));
-                                ctx.success("otherMobsのspeedを" + Config.otherMobs + "に変更しました.");
+                                Config.otherMobsSpeed = ((Double) ctx.getTypedArgs().get(0));
+                                ctx.success("otherMobsSpeedを" + Config.otherMobsSpeed + "に変更しました.");
                             });
                 });
             }
@@ -34,8 +34,8 @@ public class MainCommand extends Command {
         children(new Command("check") {
             @Override
             public void execute(CommandContext ctx) {
-                ctx.success("enderdragon: " + Config.enderdragon);
-                ctx.success("otherMobs: " + Config.otherMobs);
+                ctx.success("enderDragonSpeed: " + Config.enderDragonSpeed);
+                ctx.success("otherMobsSpeed: " + Config.otherMobsSpeed);
                 ctx.success("maxEnderDragonDistance: " + FastMob.maxEnderDragonDistance);
             }
         });

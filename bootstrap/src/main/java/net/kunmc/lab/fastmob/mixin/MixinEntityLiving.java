@@ -22,10 +22,10 @@ public abstract class MixinEntityLiving extends Entity {
         }
 
         if (e instanceof EnderDragon) {
-            super.move(type, vec.d(Config.enderdragon, 1.0, Config.enderdragon));
+            super.move(type, vec.d(Config.enderDragonSpeed, 1.0, Config.enderDragonSpeed));
             return;
         }
 
-        super.move(type, vec.d(Config.otherMobs, 1.0, Config.otherMobs));
+        super.move(type, vec.d(Config.otherMobsSpeed, 1.0, Config.otherMobsSpeed));
     }
 }

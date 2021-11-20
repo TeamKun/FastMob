@@ -26,7 +26,7 @@ public final class FastMob extends JavaPlugin {
                 if (e.getVehicle() instanceof LivingEntity) {
                     AttributeInstance attr = ((LivingEntity) e.getVehicle()).getAttribute(Attribute.GENERIC_MOVEMENT_SPEED);
                     if (attr != null) {
-                        attr.setBaseValue(attr.getDefaultValue() * 0.5 * Config.otherMobs);
+                        attr.setBaseValue(attr.getDefaultValue() * 0.5 * Config.otherMobsSpeed);
                     }
                 }
             });
